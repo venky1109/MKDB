@@ -1,0 +1,14 @@
+db.orders.updateMany(
+   {}, // Empty filter object to match all documents in the collection
+   { $set: { 
+"orderItems.$[].quantity": "1 Kg"
+ } } // Use $set to add the new field "quantity" within each object in the "items" array with a default value of 0
+)
+
+
+db.orders.updateMany(
+   {}, // Empty filter object to match all documents in the collection
+   { $set: { 
+"orderItems.$[].brand": "MK"
+ } } // Use $set to add the new field "quantity" within each object in the "items" array with a default value of 0
+)
